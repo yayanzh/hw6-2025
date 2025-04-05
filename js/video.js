@@ -13,7 +13,7 @@ document.querySelector("#play").addEventListener("click", function() {
 	// play video
 	video.play();
 	// update volume information
-	document.querySelector("#volume").innerHTML = document.getElementById("slider").value
+	document.querySelector("#volume").innerHTML = document.getElementById("slider").value + '%'
 });
 
 document.querySelector("#pause").addEventListener("click", function() {
@@ -72,17 +72,17 @@ document.querySelector("#slider").addEventListener("input", function(){
 	// set video volume to slider value
 	video.volume = document.getElementById("slider").value/100;
 	// change video volume text
-	document.querySelector("#volume").innerHTML = document.getElementById("slider").value;
+	document.querySelector("#volume").innerHTML = document.getElementById("slider").value + '%';
 });
 
 // if vintage button is clicked, add oldSchool styling
 document.querySelector("#vintage").addEventListener("click", function(){
 	video.classList.add("oldSchool");
-})
+});
 
 // if original button is clicked, remove oldSchool styling
 document.querySelector("#orig").addEventListener("click", function(){
 	video.classList.remove("oldSchool");
-})
+});
 
 
